@@ -1,0 +1,54 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>周到上海 iOS 调试</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <script type="text/javascript">
+            function myLinkFor() {
+                var newURL = document.getElementById("targetURL").value;
+                window.location.href = newURL;
+            }
+        </script>
+    </head>
+
+    <body>
+    	<ul>测试包下载
+    		<li>
+        		<a id="clickMe" href="itms-services:///?action=download-manifest&url=https://zhoudaosh.gitee.io/ios_distribution/app/deep_link/manifest.plist">稿件详情深度链接测试</a>
+        	</li>
+        	<li>
+        		<a id="clickMe" href="itms-services:///?action=download-manifest&url=https://zhoudaosh.gitee.io/ios_distribution/app/manifest.plist">首页精选卡死问题测试</a>
+        	</li>
+        	<li>
+				<a id="clickMe" href="itms-services:///?action=download-manifest&url=https://zhoudaosh.gitee.io/ios_distribution/app/5_5_5_dev/manifest.plist">5.5.5 测试环境</a>
+	        </li>
+	        <li>
+				<a id="clickMe" href="itms-services:///?action=download-manifest&url=https://zhoudaosh.gitee.io/ios_distribution/app/activity_agean/manifest.plist">爱琴海活动测试</a>
+	        </li>
+	        <li>
+				<a id="clickMe" href="itms-services:///?action=download-manifest&url=https://zhoudaosh.gitee.io/ios_distribution/app/H5_test_5_6_2/manifest.plist">H5 测试（5.6.2)</a>
+	        </li>
+	        <!--
+	        -->
+        </ul>
+        <ul>深度链接跳转
+            <li>
+                <a href="http://static.zhoudaosh.com/C851D02559EE824BFC98E0BC376F062C1790BCB7953A6408E561CF1BF7AB255B">web 端稿件详情测试</a>
+            </li>
+        	<li>
+        		<a href="https://h5s.zhoudaosh.com/app#news/71BAFC1A804839C0D17E5F975DE2491038C5C6247224A280FE07B678C117F354">Universal Link : 稿件详情</a>
+        	</li>
+            <li>
+                <a href="https://h5s.zhoudaosh.com/app/news/71BAFC1A804839C0D17E5F975DE2491038C5C6247224A280FE07B678C117F354">Universal Link : 稿件详情（未适配服务端）</a>
+            </li>
+            <li>
+                <input type="text" id="targetURL"/>
+                <input type="button" value="跳转" onclick="javascript:myLinkFor()"/>
+            </li>
+        </ul>	
+    </body>
+
+    </html>
+</DOCTYPE>
